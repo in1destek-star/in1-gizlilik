@@ -31,7 +31,7 @@
 <body>
 
 <h1>In1 — Gizlilik Politikası ve Aydınlatma Metni</h1>
-<p class="meta">Son güncelleme: 11 Eylül 2026 · Sürüm 1 · <a href="en/">English</a></p>
+<p class="meta">Son güncelleme: 18 Eylül 2026 · Sürüm 1 · <a href="en/">English</a></p>
 <p class="en">An <a href="en/">English translation</a> of this page is available. If the two texts differ, this Turkish text prevails.</p>
 
 
@@ -90,16 +90,16 @@
 <h3>3.2 Hesap verileri</h3>
 <p>Hesap açmak isteğe bağlıdır; bulut yedek ve antrenör özellikleri için gerekir.</p>
 <ul>
-  <li><strong>E-posta ile kayıt:</strong> e-posta adresiniz ve şifreniz. Şifre geri döndürülemez biçimde (karma olarak) saklanır; biz göremeyiz. Doğrulama ve şifre sıfırlama iletileri bu adrese gönderilir.</li>
-  <li><strong>Google ile giriş:</strong> Google'dan yalnızca hesabınızın e-posta adresi ve Google kullanıcı kimliği alınır. Adınızı ve Google profil fotoğrafınızı almıyoruz.</li>
+  <li><strong>Google ile giriş:</strong> hesap yalnızca Google hesabınızla açılır. Google'dan yalnızca hesabınızın e-posta adresi ve Google kullanıcı kimliği alınır. Adınızı ve Google profil fotoğrafınızı almıyoruz. Uygulama'da şifre oluşturulmaz; şifreniz Google'da kalır, bize hiç gelmez.</li>
   <li><strong>Teknik erişim kayıtları:</strong> oturum açma zamanı ve IP adresi gibi bilgiler, güvenlik amacıyla altyapı sağlayıcımızın kimlik doğrulama sisteminde tutulur.</li>
 </ul>
 <p>Tutulduğu yer: Supabase (<a href="#paylasim">bölüm 6</a>). Süre: hesabınız silinene kadar.</p>
 
 <h3>3.3 Bulut yedek (yalnızca siz isterseniz)</h3>
 <p>Profil ekranındaki <strong>"Buluta yedekle"</strong> düğmesine bastığınızda 3.1'de sayılan bütün kayıtlarınız (antrenman, beslenme, ölçüm ve profil) hesabınıza bağlı olarak sunucumuza kopyalanır. İlk yedeği siz tetiklersiniz ve o an açık rızanız istenir (bölüm 4); rıza verdikten sonra Uygulama, açılışında haftada bir yedeğinizi kendiliğinden tazeler. <strong>"Buluttan geri yükle"</strong> ile aynı veriyi başka bir telefona indirebilirsiniz.</p>
-<p>Bu yedek sağlık niteliğinde veri içerdiği için ilk yedekten önce açık rızanız istenir (<a href="#saglik">bölüm 4</a>). Yedekte, sildiğiniz kayıtların "silindi" izi de tutulur; böylece silme işlemi iki cihaz arasında doğru aktarılır.</p>
-<p>Süre: siz yedeği sildirene ya da hesabınızı silene kadar.</p>
+<p>Bu yedek sağlık niteliğinde veri içerdiği için ilk yedekten önce açık rızanız istenir (<a href="#saglik">bölüm 4</a>). Yedekte, sildiğiniz kayıtların "silindi" izi de tutulur; böylece silme işlemi iki cihaz arasında doğru aktarılır. Bu iz en fazla 7 gün tutulur, sonra sunucudan kalıcı olarak silinir.</p>
+<p>İlk yedekte verdiğiniz rızanın kaydı (rızanın türü ve tarihi) da sunucuda tutulur. Profil ekranındaki <strong>"Bulut yedeğini sil"</strong> düğmesi yedeğinizi ve bu rıza kaydını birlikte siler.</p>
+<p>Süre: siz yedeği silene ya da hesabınızı silene kadar.</p>
 
 <h3>3.4 Antrenör bağı (yalnızca siz kod girerseniz)</h3>
 <p>Bir antrenörün verdiği tek kullanımlık kodu girdiğinizde o antrenörle bir bağ kurulur. Bağ süresince sunucumuzda ve antrenörünüzün ekranında şunlar yer alır:</p>
@@ -131,7 +131,9 @@
 <p>Bir yorumu ya da antrenör profilini şikâyet ettiğinizde şikâyetiniz (hedef, sebep ve varsa açıklamanız) inceleme için sunucuda tutulur. Bu kaydı yalnızca veri sorumlusu görür; şikâyet edilen kişiye kimliğiniz açılmaz. Hesabınız silindiğinde şikâyet kayıtlarınız da silinir.</p>
 
 <h3>3.10 Ödeme</h3>
-<p>Abonelikler Google Play üzerinden alınır. Kart ve ödeme bilgileriniz Google'da kalır; bize hiç gelmez. Bize yalnızca aboneliğin geçerli olup olmadığı bilgisi ulaşır ve bunu Google'ın sisteminde doğrularız. Antrenörünüze ödediğiniz koçluk ücreti tamamen Uygulama dışındadır; onu görmez ve işlemeyiz.</p>
+<p>Abonelikler ve antrenörlerin öğrencileri için aldığı tek seferlik paketler Google Play üzerinden alınır. Kart ve ödeme bilgileriniz Google'da kalır; bize hiç gelmez. Bize yalnızca satın almanın doğrulama kaydı (ürün, plan, durum ve bitiş tarihi) ulaşır; bunu Google'ın sisteminde doğrular ve hesabınıza bağlı olarak saklarız. Antrenörünüze ödediğiniz koçluk ücreti tamamen Uygulama dışındadır; onu görmez ve işlemeyiz.</p>
+<p>Bir antrenör paket aldığında sunucuda bir <strong>paket kodu</strong> oluşur: kodun kendisi, paketin süresi ve paketi alan antrenör. Bu kodu kullandığınızda kodu hangi hesabın kullandığı ile hakkınızın başlangıç ve bitiş tarihi de kaydedilir. Hesabınızı sildiğinizde kayıt ile hesabınız arasındaki bağ kopar; kaydın kendisi paketi alan antrenörün hesabı silinene kadar tutulur.</p>
+<p>Aboneliğin iptali ve iade talepleri Google Play üzerinden, Google Play'in iade politikasına göre yürür. Avrupa Birliği'ndeki kullanıcıların yasal cayma ve iade hakları saklıdır.</p>
 
 <h3>3.11 Toplamadıklarımız</h3>
 <p>Konum, rehber, kamera, mikrofon, dosyalarınız ve reklam kimliği toplanmaz. Uygulamada analitik, çökme raporu veya reklam kütüphanesi yoktur. Verilerinizi satmıyor, reklam amacıyla paylaşmıyoruz. Hakkınızda otomatik karar alma ya da profilleme yapılmaz; antrenman ve beslenme programları sizin seçimlerinizden, telefonunuzun içinde üretilir.</p>
@@ -142,20 +144,20 @@
   <li><strong>Bulut yedek</strong> — "Buluta yedekle" düğmesine ilk bastığınızda.</li>
   <li><strong>Antrenör bağı</strong> — antrenör kodunu girerken.</li>
 </ol>
-<p>Rızanızı vermezseniz yalnızca o özellik çalışmaz; Uygulama'nın geri kalanı etkilenmez. Rızanızı geri almak için bulut yedeğinizi sildirebilir (<a href="#hesap-silme">bölüm 11</a>) ve antrenör bağını bitirebilirsiniz. Geri alma, o ana kadar yapılan işlemenin hukuka uygunluğunu etkilemez.</p>
+<p>Rızanızı vermezseniz yalnızca o özellik çalışmaz; Uygulama'nın geri kalanı etkilenmez. Rızanızı geri almak için Profil'deki "Bulut yedeğini sil" düğmesiyle bulut yedeğinizi silebilir (<a href="#hesap-silme">bölüm 11</a>) ve antrenör bağını bitirebilirsiniz. Geri alma, o ana kadar yapılan işlemenin hukuka uygunluğunu etkilemez.</p>
 <p>Antrenörünüze verdiğiniz rapor cevaplarına sağlık bilgisi yazıp yazmamak sizin kararınızdır. Uygulama bir tıbbi cihaz değildir ve tıbbi tavsiye vermez.</p>
 
 <h2 id="amaclar">5. Amaçlar ve hukuki dayanaklar</h2>
 <div class="scroll">
 <table>
   <tr><th>Amaç</th><th>Veri</th><th>Dayanak (KVKK)</th></tr>
-  <tr><td>Hesap açmak ve oturum yönetmek</td><td>e-posta, şifre karması, Google kimliği</td><td>Sözleşmenin kurulması ve ifası (m.5/2-c)</td></tr>
+  <tr><td>Hesap açmak ve oturum yönetmek</td><td>e-posta adresi, Google kullanıcı kimliği</td><td>Sözleşmenin kurulması ve ifası (m.5/2-c)</td></tr>
   <tr><td>Bulut yedek almak ve geri yüklemek</td><td>3.1'deki kayıtlar</td><td>Açık rıza (m.6 — sağlık verisi)</td></tr>
   <tr><td>Antrenör hizmetini yürütmek</td><td>kod girerken yazdığınız ad, atamalar, uyum verisi, rapor cevapları, bağ kaydı</td><td>Açık rıza (sağlık verisi) ve sözleşmenin ifası</td></tr>
   <tr><td>Antrenör profilini göstermek</td><td>3.5'teki profil</td><td>Sözleşmenin ifası; ilgili kişinin alenileştirmesi (m.5/2-d)</td></tr>
   <tr><td>Bildirim göndermek</td><td>jeton, dil, bildirim metni</td><td>Sözleşmenin ifası</td></tr>
   <tr><td>Güvenlik, kötüye kullanımı önleme, engelleme</td><td>erişim kayıtları, engelleme kayıtları, şikâyet kayıtları, bağ kaydı</td><td>Meşru menfaat (m.5/2-f)</td></tr>
-  <tr><td>Abonelik doğrulama</td><td>Google Play satın alma kaydı</td><td>Sözleşmenin ifası</td></tr>
+  <tr><td>Abonelik ve paket doğrulama</td><td>Google Play satın alma kaydı, paket kodu kaydı</td><td>Sözleşmenin ifası</td></tr>
   <tr><td>Yasal yükümlülükler ve resmî talepler</td><td>ilgili kayıt</td><td>Hukuki yükümlülük (m.5/2-ç)</td></tr>
 </table>
 </div>
@@ -166,7 +168,7 @@
   <li><strong>Diğer kullanıcılar:</strong> antrenör profilleri (3.5) ve isimsiz yorumlar (3.6).</li>
   <li><strong>Hizmet sağlayıcılarımız</strong> (bizim adımıza veri işleyenler):
     <ul>
-      <li><strong>Supabase, Inc.</strong> (ABD) — veritabanı, kimlik doğrulama, dosya deposu ve doğrulama e-postaları. Verileriniz Supabase'in Frankfurt / Almanya bölgesindeki (AWS eu-central-1) sunucularında tutulur. <a href="https://supabase.com/privacy" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Supabase, Inc.</strong> (ABD) — veritabanı, kimlik doğrulama ve dosya deposu. Verileriniz Supabase'in Frankfurt / Almanya bölgesindeki (AWS eu-central-1) sunucularında tutulur. <a href="https://supabase.com/privacy" rel="noopener">supabase.com/privacy</a></li>
       <li><strong>Google LLC</strong> (ABD) — Firebase Cloud Messaging (bildirim iletimi), Google ile giriş, Google Play (uygulama dağıtımı ve abonelik ödemeleri). <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></li>
     </ul>
   </li>
@@ -209,12 +211,17 @@
   <tr><td>Telefonunuzdaki kayıtlar</td><td>Siz silene ya da uygulamayı kaldırana kadar</td></tr>
   <tr><td>Hesap (e-posta, kimlik)</td><td>Hesap silinene kadar</td></tr>
   <tr><td>Bulut yedek</td><td>Siz sildirene ya da hesap silinene kadar</td></tr>
+  <tr><td>Silinen kayıtların yedekteki izi</td><td>En fazla 7 gün</td></tr>
   <tr><td>Atamalar, raporlar, rapor ayarları</td><td>Bağ bitince ertesi gün (günlük temizlik)</td></tr>
   <tr><td>Cevaplanmamış ve süresi geçmiş raporlar</td><td>Süresi dolunca, günlük temizlikte</td></tr>
   <tr><td>Bağ kaydı ve kullanılmış kodlar</td><td>Hesap silinene kadar</td></tr>
+  <tr><td>Satın alma doğrulama kaydı</td><td>Hesap silinene kadar</td></tr>
+  <tr><td>Paket kodu kaydı</td><td>Paketi alan antrenörün hesabı silinene kadar; kodu kullanan hesapla bağı o hesap silinince kopar</td></tr>
   <tr><td>Antrenör profili ve fotoğrafı</td><td>Antrenörlük bırakılana ya da hesap silinene kadar</td></tr>
   <tr><td>Puan ve yorum</td><td>Siz silene ya da hesap silinene kadar</td></tr>
   <tr><td>Şikâyet kayıtları</td><td>Hesap silinene kadar</td></tr>
+  <tr><td>Engelleme kayıtları</td><td>Engeli kaldırana ya da hesap silinene kadar</td></tr>
+  <tr><td>Rıza kaydı (bulut yedek)</td><td>Bulut yedeği silinene ya da hesap silinene kadar</td></tr>
   <tr><td>Bildirim jetonu</td><td>Oturum kapanınca</td></tr>
   <tr><td>Bildirim gönderim kayıtları</td><td>En geç 30 gün</td></tr>
   <tr><td>Erişim ve güvenlik kayıtları</td><td>Altyapı sağlayıcının standart, kısa süresi</td></tr>
@@ -223,7 +230,7 @@
 <p>Hesabınız silindiğinde yukarıdakilerin tamamı en geç 30 gün içinde silinir (<a href="#hesap-silme">bölüm 11</a>).</p>
 
 <h2 id="guvenlik">9. Güvenlik</h2>
-<p>Telefon ile sunucu arasındaki bütün iletişim şifrelidir (TLS). Sunucuda her kayıt sahibine bağlıdır: satır düzeyi erişim kuralları sayesinde bir kullanıcı yalnızca kendi kayıtlarına, kendisine açılmış bağ verisine ve herkese açık içeriğe (antrenör profilleri, puan ve yorumlar) ulaşabilir. Şifreler karma olarak saklanır. Sunucu yönetim erişimi yalnızca veri sorumlusuna aittir. Hiçbir sistem yüzde yüz güvenli değildir; bir veri ihlali olursa KVKK'nın öngördüğü sürede Kişisel Verileri Koruma Kurulu'na ve etkilenen kullanıcılara bildiririz.</p>
+<p>Telefon ile sunucu arasındaki bütün iletişim şifrelidir (TLS). Sunucuda her kayıt sahibine bağlıdır: satır düzeyi erişim kuralları sayesinde bir kullanıcı yalnızca kendi kayıtlarına, kendisine açılmış bağ verisine ve herkese açık içeriğe (antrenör profilleri, puan ve yorumlar) ulaşabilir. Uygulama şifre tutmaz; giriş Google hesabınızla yapılır. Sunucu yönetim erişimi yalnızca veri sorumlusuna aittir. Hiçbir sistem yüzde yüz güvenli değildir; bir veri ihlali olursa KVKK'nın öngördüğü sürede Kişisel Verileri Koruma Kurulu'na ve etkilenen kullanıcılara bildiririz.</p>
 
 <h2 id="haklar">10. Haklarınız (KVKK m.11)</h2>
 <p>Kişisel verilerinizle ilgili olarak şunları isteyebilirsiniz:</p>
@@ -238,7 +245,7 @@
   <li>Kanuna aykırı işleme yüzünden zarara uğrarsanız zararın giderilmesini isteme.</li>
 </ul>
 <div class="kutu"><strong>Başvuru:</strong> hesabınızın e-posta adresinden <a href="mailto:in1destek@gmail.com?subject=KVKK%20ba%C5%9Fvurusu">in1destek@gmail.com</a> adresine, konu satırına "KVKK başvurusu" yazarak. Başvurunuz en geç 30 gün içinde ücretsiz cevaplanır. Kimliğinizi doğrulamak için hesabınızın e-postasından yazmanız yeterlidir. Sonuçtan memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsiniz (<a href="https://www.kvkk.gov.tr" rel="noopener">kvkk.gov.tr</a>).</div>
-<p>Uygulama içinden kendiniz yapabilecekleriniz: profil bilgilerinizi düzeltme, ölçüm ve kayıt silme, yorum silme, antrenör bağını bitirme, oturumu kapatma, bildirimleri kapatma.</p>
+<p>Uygulama içinden kendiniz yapabilecekleriniz: profil bilgilerinizi düzeltme, ölçüm ve kayıt silme, yorum silme, bulut yedeğini silme, engeli kaldırma, antrenör bağını bitirme, oturumu kapatma, bildirimleri kapatma.</p>
 
 <h2 id="hesap-silme">11. Hesabınızı ve verilerinizi silme</h2>
 <p>Hesabınızı iki yoldan sildirebilirsiniz:</p>
@@ -246,8 +253,8 @@
   <li><strong>Uygulama içinden:</strong> Profil → Hesabımı sil.</li>
   <li><strong>E-posta ile:</strong> hesabınızın e-posta adresinden <a href="mailto:in1destek@gmail.com?subject=Hesab%C4%B1m%C4%B1%20sil">in1destek@gmail.com</a> adresine "Hesabımı sil" yazın.</li>
 </ul>
-<p><strong>Silinenler:</strong> hesabınız, bulut yedeğiniz, bağ kayıtlarınız, size ait atamalar ve raporlar, puan ve yorumlarınız, varsa antrenör profiliniz ve fotoğrafınız, bildirim jetonlarınız. Hepsi en geç 30 gün içinde kalıcı olarak silinir. Antrenörseniz aktif öğrencilerinizin bağları kapanır; onlara atanmış içerik planlanan bitişine kadar kendi telefonlarında kalır.</p>
-<p>Telefonunuzdaki kayıtlar hesap silmekten etkilenmez; onları uygulamayı kaldırarak silersiniz. Hesabınızı kapatmadan <strong>yalnızca bulut yedeğinizi</strong> sildirmek isterseniz aynı adrese yazmanız yeterlidir.</p>
+<p><strong>Silinenler:</strong> hesabınız, bulut yedeğiniz, bağ kayıtlarınız, size ait atamalar ve raporlar, puan ve yorumlarınız, engelleme ve şikâyet kayıtlarınız, rıza kayıtlarınız, varsa antrenör profiliniz ve fotoğrafınız, bildirim jetonlarınız. Hepsi en geç 30 gün içinde kalıcı olarak silinir. Antrenörseniz aktif öğrencilerinizin bağları kapanır; onlara atanmış içerik planlanan bitişine kadar kendi telefonlarında kalır.</p>
+<p>Telefonunuzdaki kayıtlar hesap silmekten etkilenmez; onları uygulamayı kaldırarak silersiniz. Hesabınızı kapatmadan <strong>yalnızca bulut yedeğinizi</strong> silmek isterseniz Profil → "Bulut yedeğini sil" düğmesini kullanabilir ya da aynı adrese yazabilirsiniz.</p>
 
 <h2 id="cocuklar">12. Çocuklar</h2>
 <p>Uygulama 13 yaşından küçüklere yönelik değildir. Antrenör bağı kurmak için en az 15 yaşında olmanız gerekir; 15-17 yaş için veli onayı beyanı istenir. Beyan doğrulanmaz; sorumluluk beyan edene ve velisine aittir. Antrenör olmak için 18 yaşını doldurmuş olmak gerekir. Bir çocuğun verisini rızasız işlediğimizi düşünüyorsanız bize yazın; kaydı sileriz.</p>
