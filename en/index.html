@@ -31,7 +31,7 @@
 <body>
 
 <h1>In1 - Privacy Policy and Privacy Notice</h1>
-<p class="meta">Last updated: 21 October 2026 · Version 2 · <a href="../">Türkçe</a></p>
+<p class="meta">Last updated: 28 October 2026 · Version 4 · <a href="../">Türkçe</a></p>
 <p class="en">This is a translation of the Turkish original, provided for convenience. If the two texts differ, the <a href="../">Turkish text</a> prevails.</p>
 
 <nav>
@@ -62,17 +62,17 @@
   <li><strong>You can use the app without an account.</strong> In that case all your data stays on your phone alone; nothing reaches us.</li>
   <li><strong>Your health-related data</strong> (weight, body measurements, date of birth, sex, training and nutrition records) reaches our server in two situations only, and only if you explicitly consent: when you press <em>"Back up to cloud"</em>, and when you <em>link with a trainer</em>.</li>
   <li><strong>No ads, no tracking, no data sales.</strong> The app contains no analytics, crash-reporting or advertising library.</li>
-  <li><strong>Our server runs in Germany</strong> (Frankfurt). Google's infrastructure is used for notifications and "Sign in with Google".</li>
+  <li><strong>Our server runs in Germany</strong> (Frankfurt). Google's infrastructure is used for notifications and "Sign in with Google"; on iPhone, Apple's infrastructure is also used for "Sign in with Apple", notification delivery and App Store payments.</li>
   <li><strong>You can have your account and all of your server-side data deleted</strong> at any time (<a href="#hesap-silme">section 11</a>).</li>
 </ul>
 
 <h2 id="veri-sorumlusu">1. Data controller and contact</h2>
-<p>The developer and operator of the In1 app (the "App"; Android package name <code>com.cctogether.in1</code>), and the data controller within the meaning of Turkish Personal Data Protection Law no. 6698 ("KVKK"):</p>
+<p>The developer and operator of the In1 app (the "App"; Android package name <code>com.cctogether.in1</code>, iPhone bundle ID <code>com.cctogether.in1.ios</code>), and the data controller within the meaning of Turkish Personal Data Protection Law no. 6698 ("KVKK"):</p>
 <div class="kutu"><strong>Ali Emre CİNEMRE</strong> (natural person)<br>E-mail: <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a></div>
 <p>The "Platform" referred to in the Trainer Agreement is this person. If a company is founded later, only this section changes.</p>
 
 <h2 id="kapsam">2. Scope</h2>
-<p>This text covers the Android version of the App. The privacy policies of third parties such as Google Play, your Google account and our infrastructure provider Supabase apply separately; you will find links in <a href="#paylasim">section 6</a>.</p>
+<p>This text covers the Android and iPhone (iOS) versions of the App. The privacy policies of third parties such as Google Play, the App Store, your Google or Apple account and our infrastructure provider Supabase apply separately; you will find links in <a href="#paylasim">section 6</a>.</p>
 
 <h2 id="veriler">3. What we process, and where</h2>
 
@@ -84,12 +84,12 @@
   <li><strong>Body measurements:</strong> weight, circumference measurements and any other measurements you enter, with their dates.</li>
   <li><strong>Profile:</strong> height, sex, date of birth, name, username, e-mail, unit and notification preferences.</li>
 </ul>
-<p>We cannot see this data. Android's automatic backup (Google Drive) and phone-to-phone transfer are disabled for this app; the only route to the cloud is the button described in 3.3. When you uninstall the App, this data is deleted.</p>
+<p>We cannot see this data. Android's automatic backup (Google Drive) and phone-to-phone transfer are disabled for this app; the only route to our server is the button described in 3.3. On iPhone, if your phone's iCloud backup is turned on, this data may also be included in the device backup that Apple keeps; Apple stores that backup and we cannot see it. When you uninstall the App, this data is deleted.</p>
 
 <h3>3.2 Account data</h3>
 <p>An account is optional; it is required for cloud backup and trainer features.</p>
 <ul>
-  <li><strong>Sign in with Google:</strong> an account can only be opened with your Google account. Only your account's e-mail address and Google user ID are taken from Google. We do not take your name or your Google profile picture. No password is created in the App; your password stays with Google and never reaches us.</li>
+  <li><strong>Sign in with Google or with Apple:</strong> an account can only be opened with your Google account or (on iPhone) your Apple account. Only your account's e-mail address and Google user ID are taken from Google. Only your e-mail address - or, if you chose to hide it, the relay address Apple creates for you - and your Apple user ID are taken from Apple. We do not take your name or your profile picture. No password is created in the App; your password stays with Google or Apple and never reaches us.</li>
   <li><strong>Technical access records:</strong> information such as sign-in time and IP address is kept in our infrastructure provider's authentication system for security purposes.</li>
 </ul>
 <p>Where it is kept: Supabase (<a href="#paylasim">section 6</a>). Duration: until your account is deleted.</p>
@@ -105,14 +105,21 @@
 <ul>
   <li><strong>The name you type when entering the code.</strong> It is shown to that trainer only; it is deleted when the link ends.</li>
   <li>The training programs and nutrition plans your trainer assigns to you.</li>
-  <li><strong>Adherence data:</strong> whether you did the assigned workout, whether you followed the assigned nutrition plan - as counts; not set or meal detail.</li>
+  <li><strong>Only if you turn them on</strong> (each with its own switch, off by default):
+    <ul>
+      <li><strong>Adherence data:</strong> how many assigned workouts you did, how many assigned meals you ticked - as counts; sent with your report answer.</li>
+      <li><strong>Body measurements:</strong> the latest value, date and change from the previous value of each measurement you have entered since the link began.</li>
+      <li><strong>Muscle distribution:</strong> the percentage share of muscle groups, based on the workouts your trainer assigned and you completed.</li>
+      <li><strong>Workout summaries:</strong> the date, duration, total volume, exercise and set summary of the workouts your trainer assigned and you completed.</li>
+    </ul>
+  </li>
   <li>The <strong>report questions your trainer prepares and the answers you give</strong> (free text or choice). What you write in your answers is up to you; you are not obliged to share health information.</li>
   <li>If you are 15-17 years old, the <strong>"I have my parent's consent"</strong> statement you tick.</li>
   <li><strong>The link itself:</strong> which trainer, for which service (training / nutrition), start and end dates, reason for ending.</li>
   <li>So that your trainer can manage the link: <strong>your Premium end date</strong> (the link cannot run past it), whether the assigned program <strong>reached your phone</strong>, and <strong>on which day you answered</strong> each report.</li>
 </ul>
-<div class="kutu">Your trainer sees you under the name you type when entering the code; that name is shown to no other user. Your trainer <strong>cannot</strong> see your e-mail address, the records you keep on your own, your measurements or your cloud backup. Whose student you are is not shown to other users.</div>
-<p>Duration: when the link ends (because you leave, the trainer removes you, or the term expires) the assignments, reports, report settings and the name you typed are deleted by the following day. The link record itself (identifiers, dates, reason for ending) is kept until your account is deleted, to support re-linking and to prevent abuse.</p>
+<div class="kutu">Your trainer sees you under the name you type when entering the code; that name is shown to no other user. Your trainer <strong>cannot</strong> see your e-mail address, the workouts and meals you set up yourself, your measurements from before the link, the items you keep off, or your cloud backup. Whose student you are is not shown to other users.</div>
+<p>Duration: when the link ends (because you leave, the trainer removes you, or the term expires) the assignments, reports, report settings and the name you typed are deleted by the following day. When you turn off sharing of measurements, muscle distribution or workout summaries, that item's copy on the server is deleted at once; when you turn off adherence sharing, no new count is sent, and the counts in report answers you already sent stay with those answers. The link record itself (identifiers, dates, reason for ending) is kept until your account is deleted, to support re-linking and to prevent abuse.</p>
 
 <h3>3.5 Trainer profile (for those who become trainers)</h3>
 <p>When you become a trainer you create a <strong>commercial profile</strong> visible to other users: your real name, profile picture, WhatsApp line, biography, the services you offer, your "I am over 18" statement, and the date and version of the agreement you accepted. You choose who can see your WhatsApp number (everyone / my students only / no one). The profile picture is kept at a publicly accessible file address; anyone who knows the link can view it.</p>
@@ -122,7 +129,7 @@
 <p>You may give a trainer whose student you are a rating from 1 to 5 and a review of up to 500 characters; the trainer may reply to your review. Reviews are published to other users inside the App <strong>without showing your name</strong>. You can delete your rating and review at any time.</p>
 
 <h3>3.7 Notifications</h3>
-<p>For notifications about new assignments, reports, answers and expiring terms, your phone's Firebase notification token and your app language are held on the server. The notification text (for example your trainer's name and "assigned a new program") is delivered from our server to your phone through Google's <strong>Firebase Cloud Messaging</strong> service. The token is deleted when you sign out. You can turn notifications off in the app settings. Records of notifications sent are deleted within 30 days at the latest.</p>
+<p>For notifications about new assignments, reports, answers and expiring terms, your phone's Firebase notification token and your app language are held on the server. The notification text (for example your trainer's name and "assigned a new program") is delivered from our server to your phone through Google's <strong>Firebase Cloud Messaging</strong> service; on iPhone this delivery also passes through Apple's notification service (APNs). The token is deleted when you sign out. You can turn notifications off in the app settings. Records of notifications sent are deleted within 30 days at the latest.</p>
 
 <h3>3.8 Blocking</h3>
 <p>When you block a user, that record is held on the server and that person's reviews are not shown to you. When you unblock them, the record is deleted.</p>
@@ -131,36 +138,36 @@
 <p>When you report a review or a trainer profile, your report (the target, the reason and your explanation if you gave one) is held on the server for review. Only the data controller sees this record; your identity is not disclosed to the person reported. When your account is deleted, your report records are deleted with it.</p>
 
 <h3>3.10 Payment</h3>
-<p>Subscriptions, and the one-time packages that trainers buy for their students, are purchased through Google Play. Your card and payment details stay with Google; they never reach us. Only the verification record of the purchase (product, plan, status and expiry date) reaches us; we verify it within Google's system and store it linked to your account. The coaching fee you pay your trainer is entirely outside the App; we neither see nor process it.</p>
+<p>Subscriptions, and the one-time packages that trainers buy for their students, are purchased through Google Play on Android and through the App Store on iPhone. Your card and payment details stay with Google or Apple; they never reach us. Only the verification record of the purchase (product, plan, status, expiry date and the store's transaction number) reaches us; we verify it within Google's or Apple's system and store it linked to your account. The coaching fee you pay your trainer is entirely outside the App; we neither see nor process it.</p>
 <p>When a trainer buys a package, a <strong>package code</strong> is created on the server: the code itself, the length of the package and the trainer who bought it. When you use that code, the account that used it and the start and end dates of your entitlement are recorded as well. When you delete your account, the link between the record and your account is removed; the record itself is kept until the account of the trainer who bought the package is deleted.</p>
-<p>Cancelling a subscription and requesting a refund are handled through Google Play under Google Play's refund policy. The statutory withdrawal and refund rights of users in the European Union are not affected.</p>
+<p>Cancelling a subscription and requesting a refund are handled through the store you bought from (Google Play or the App Store) under that store's refund policy. The statutory withdrawal and refund rights of users in the European Union are not affected.</p>
 
 <h3>3.11 What we do not collect</h3>
 <p>We do not collect location, contacts, camera, microphone, your files or an advertising ID. The App contains no analytics, crash-reporting or advertising library. We do not sell your data or share it for advertising. No automated decision-making or profiling is carried out about you; training and nutrition programs are produced from your own choices, inside your phone.</p>
 
 <h3 id="testci">3.12 Closed test period</h3>
-<p>During the closed test before the App's public release, everyone with an account can use Premium and the trainer account free of charge until the test period ends. No new data is processed for this: only your account's creation date (3.2) is checked. When the test period ends, free use ends automatically; if you have not paid, your trainer links close the same way as for anyone whose Premium or trainer account has ended (3.4).</p>
+<p>During the closed test before the App's public release, everyone with an account can use Premium and the trainer account free of charge until the test period ends. Store review accounts and accounts opened with Sign in with Apple (the iPhone version is not released during this period) are excluded. No new data is processed for this: only your account's creation date (3.2) is checked. When the test period ends, free use ends automatically; if you have not paid, your trainer links close the same way as for anyone whose Premium or trainer account has ended (3.4).</p>
 
 <h2 id="saglik">4. Health data and explicit consent</h2>
 <p>Your weight, body measurements, date of birth, sex, and your training and nutrition records may count as <strong>special categories of personal data (health data)</strong> under KVKK. This data leaves your phone through two gates only, and at both of them your explicit consent is requested first:</p>
 <ol>
   <li><strong>Cloud backup</strong> - the first time you press "Back up to cloud".</li>
-  <li><strong>Trainer link</strong> - while you are entering the trainer code.</li>
+  <li><strong>Trainer link</strong> - while you are entering the trainer code. Adherence data, body measurements, muscle distribution and workout summaries are not part of this consent: for each of them you give explicit consent separately by turning on that item's switch on the Trainers page.</li>
 </ol>
-<p>If you do not consent, only that feature stops working; the rest of the App is unaffected. To withdraw your consent you can delete your cloud backup with the "Delete cloud backup" button on the Profile screen (<a href="#hesap-silme">section 11</a>) and end the trainer link. Withdrawal does not affect the lawfulness of processing carried out until then.</p>
+<p>If you do not consent, only that feature stops working; the rest of the App is unaffected. To withdraw your consent you can delete your cloud backup with the "Delete cloud backup" button on the Profile screen (<a href="#hesap-silme">section 11</a>), turn off an item you share with your trainer on the Trainers page, and end the trainer link. Withdrawal does not affect the lawfulness of processing carried out until then.</p>
 <p>Whether you write health information into the report answers you give your trainer is your decision. The App is not a medical device and does not give medical advice.</p>
 
 <h2 id="amaclar">5. Purposes and legal bases</h2>
 <div class="scroll">
 <table>
   <tr><th>Purpose</th><th>Data</th><th>Basis (KVKK)</th></tr>
-  <tr><td>Opening an account and managing sessions</td><td>e-mail address, Google user ID</td><td>Formation and performance of the contract (art. 5/2-c)</td></tr>
+  <tr><td>Opening an account and managing sessions</td><td>e-mail address, Google or Apple user ID</td><td>Formation and performance of the contract (art. 5/2-c)</td></tr>
   <tr><td>Taking and restoring a cloud backup</td><td>the records in 3.1</td><td>Explicit consent (art. 6 - health data)</td></tr>
-  <tr><td>Running the trainer service</td><td>the name typed with the code, assignments, adherence data, report answers, link record</td><td>Explicit consent (health data) and performance of the contract</td></tr>
+  <tr><td>Running the trainer service</td><td>the name typed with the code, assignments, report answers, link record; if you turn them on, adherence data, body measurements, muscle distribution and workout summaries</td><td>Explicit consent (health data) and performance of the contract</td></tr>
   <tr><td>Displaying the trainer profile</td><td>the profile in 3.5</td><td>Performance of the contract; data made public by the data subject (art. 5/2-d)</td></tr>
   <tr><td>Sending notifications</td><td>token, language, notification text</td><td>Performance of the contract</td></tr>
   <tr><td>Security, preventing abuse, blocking</td><td>access records, blocking records, report records, link record</td><td>Legitimate interest (art. 5/2-f)</td></tr>
-  <tr><td>Verifying subscriptions and packages</td><td>Google Play purchase record, package code record</td><td>Performance of the contract</td></tr>
+  <tr><td>Verifying subscriptions and packages</td><td>Google Play or App Store purchase record, package code record</td><td>Performance of the contract</td></tr>
   <tr><td>Legal obligations and official requests</td><td>the relevant record</td><td>Legal obligation (art. 5/2-ç)</td></tr>
 </table>
 </div>
@@ -173,6 +180,7 @@
     <ul>
       <li><strong>Supabase, Inc.</strong> (USA) - database, authentication and file storage. Your data is held on Supabase's servers in the Frankfurt / Germany region (AWS eu-central-1). <a href="https://supabase.com/privacy" rel="noopener">supabase.com/privacy</a></li>
       <li><strong>Google LLC</strong> (USA) - Firebase Cloud Messaging (notification delivery), Sign in with Google, Google Play (app distribution and subscription payments). <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></li>
+      <li><strong>Apple Inc.</strong> (USA) - iPhone version only: Sign in with Apple, notification delivery (APNs), App Store (app distribution and subscription payments). <a href="https://www.apple.com/legal/privacy/" rel="noopener">apple.com/legal/privacy</a></li>
     </ul>
   </li>
   <li><strong>Competent public authorities:</strong> only where legally required and limited to the scope of the request.</li>
@@ -180,14 +188,14 @@
 <p>Beyond these we share your data with no one, and we do not sell it.</p>
 
 <h2 id="yurt-disi">7. Transfers abroad</h2>
-<p>Our servers are in Germany; Supabase and Google are US companies. When you open an account, your data is transferred to these countries. Under KVKK art. 9 this transfer rests on <strong>your explicit consent</strong>: you approve it when you open an account and at the cloud-backup and trainer-link gates. If you use the App without an account, no data goes abroad - or anywhere else at all.</p>
+<p>Our servers are in Germany; Supabase, Google and Apple are US companies. When you open an account, your data is transferred to these countries. Under KVKK art. 9 this transfer rests on <strong>your explicit consent</strong>: you approve it when you open an account and at the cloud-backup and trainer-link gates. If you use the App without an account, no data goes abroad - or anywhere else at all.</p>
 
 <h3 id="turkiye-disi">7.1 Users outside Turkey</h3>
 <p>This policy applies to all users, whichever country you are in; we grant the rights in <a href="#haklar">section 10</a> to everyone. KVKK is the law of Turkey, where the data controller is established. If you live in the European Union / European Economic Area or the United Kingdom, the General Data Protection Regulation (GDPR / UK GDPR) also applies:</p>
 <ul>
   <li><strong>Legal bases</strong> are the same as in the table in section 5: performance of the contract (GDPR art. 6(1)(b)), legitimate interest (art. 6(1)(f)), legal obligation (art. 6(1)(c)); and explicit consent for health data (art. 9(2)(a)).</li>
   <li><strong>Additional rights:</strong> to receive your data in a machine-readable format (data portability), to request restriction of processing, to withdraw your consent at any time, and to lodge a complaint with the data protection authority in your own country.</li>
-  <li><strong>Transfers:</strong> your data is held within the EU (Germany). Transfers to Google and to Supabase's US entity are covered by those companies' standard contractual clauses and, where applicable, their EU-US Data Privacy Framework certifications.</li>
+  <li><strong>Transfers:</strong> your data is held within the EU (Germany). Transfers to Google, to Apple and to Supabase's US entity are covered by those companies' standard contractual clauses and, where applicable, their EU-US Data Privacy Framework certifications.</li>
 </ul>
 <p>Any additional rights granted to you by local law in other countries are reserved; you may use the same address to apply.</p>
 
@@ -198,10 +206,10 @@
   <li><strong>Consumer health data we collect:</strong> weight and body measurements, height, date of birth, gender, workout records, nutrition records and - if you choose to write them - your answers to your coach's report questions (<a href="#veriler">section 3</a>).</li>
   <li><strong>Where it comes from:</strong> only from what you enter in the App. We do not buy or gather data from any other source.</li>
   <li><strong>Why we collect it:</strong> to build your training program and nutrition plan, to keep your cloud backup and - if you have linked to one - to run your coach's service. It is never used for advertising, profiling or research.</li>
-  <li><strong>Who we share it with:</strong> only the coach you choose (for as long as the link lasts) and the service providers that process data on our behalf - Supabase (database, file storage) and Google (notifications, sign-in, Play). The full list is in <a href="#paylasim">section 6</a>.</li>
+  <li><strong>Who we share it with:</strong> only the coach you choose (for as long as the link lasts) and the service providers that process data on our behalf - Supabase (database, file storage), Google (notifications, sign-in, Play) and, on iPhone, Apple (sign-in, notification delivery, App Store). The full list is in <a href="#paylasim">section 6</a>.</li>
   <li><strong>No sale:</strong> we do not sell your consumer health data and will not. The law requires a separate signed authorization for any sale; we never ask for one.</li>
   <li><strong>No geofencing:</strong> the App collects no location data, and we place no virtual boundary (geofence) around health care facilities.</li>
-  <li><strong>Your rights:</strong> to know what consumer health data we hold and who it has been shared with, to have it deleted, and to withdraw a consent you have given. You can have it deleted from inside the App (Profile → Delete my account) or by e-mail; you withdraw consent by deleting your cloud backup and ending your coach link (<a href="#saglik">section 4</a> and <a href="#hesap-silme">section 11</a>).</li>
+  <li><strong>Your rights:</strong> to know what consumer health data we hold and who it has been shared with, to have it deleted, and to withdraw a consent you have given. You can have it deleted from inside the App (Profile → Delete my account) or by e-mail; you withdraw consent by deleting your cloud backup, turning off an item you share with your coach and ending your coach link (<a href="#saglik">section 4</a> and <a href="#hesap-silme">section 11</a>).</li>
 </ul>
 <p>Requests go to the same address as <a href="#haklar">section 10</a>: <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a>. We answer within 45 days; if we need longer we may extend once by a further 45 days and will tell you. If we refuse a request we explain why and how to appeal. You also have the right to complain to the Washington State Attorney General.</p>
 
@@ -231,7 +239,7 @@
 <p>When your account is deleted, all of the above is deleted within 30 days at the latest (<a href="#hesap-silme">section 11</a>).</p>
 
 <h2 id="guvenlik">9. Security</h2>
-<p>All communication between the phone and the server is encrypted (TLS). On the server every record is tied to its owner: thanks to row-level access rules, a user can reach only their own records, the link data opened to them, and publicly available content (trainer profiles, ratings and reviews). The App holds no passwords; sign-in is through your Google account. Server administration access belongs to the data controller alone. No system is one hundred per cent secure; if a data breach occurs we will notify the Personal Data Protection Board and the affected users within the period required by KVKK.</p>
+<p>All communication between the phone and the server is encrypted (TLS). On the server every record is tied to its owner: thanks to row-level access rules, a user can reach only their own records, the link data opened to them, and publicly available content (trainer profiles, ratings and reviews). The App holds no passwords; sign-in is through your Google or Apple account. Server administration access belongs to the data controller alone. No system is one hundred per cent secure; if a data breach occurs we will notify the Personal Data Protection Board and the affected users within the period required by KVKK.</p>
 
 <h2 id="haklar">10. Your rights (KVKK art. 11)</h2>
 <p>In relation to your personal data you may request:</p>
@@ -257,10 +265,10 @@
 <p><strong>What is deleted:</strong> your account, your cloud backup, your link records, the assignments and reports belonging to you, your ratings and reviews, your blocking and report records, your consent records, your trainer profile and picture if any, and your notification tokens. All of it is permanently deleted within 30 days at the latest. If you are a trainer, your active students' links are closed; content already assigned to them stays on their own phones until its planned end.</p>
 <p>The records on your phone are not affected by account deletion; you delete those by uninstalling the app. If you want <strong>only your cloud backup</strong> deleted without closing your account, use Profile → "Delete cloud backup" or write to the same address.</p>
 
-<h3 id="erisim-kaybi">11.1 If you can no longer access your Google account</h3>
-<p>Your account in the App is your Google account itself; the App has no separate password and no account recovery of its own. If you lose access to your Google account, you get it back through <a href="https://accounts.google.com/signin/recovery" rel="noopener">Google's account recovery steps</a>; we are not able to do this for you.</p>
+<h3 id="erisim-kaybi">11.1 If you can no longer access your Google or Apple account</h3>
+<p>Your account in the App is the Google or Apple account you signed in with; the App has no separate password and no account recovery of its own. If you lose access to that account, you get it back through <a href="https://accounts.google.com/signin/recovery" rel="noopener">Google's</a> or <a href="https://iforgot.apple.com" rel="noopener">Apple's</a> account recovery steps; we are not able to do this for you.</p>
 <ul>
-  <li><strong>We do not move data to another account.</strong> Your cloud backup, your trainer link and your package code are not transferred to a new account you open: we cannot verify that two accounts belong to the same person, and giving your data to the wrong person would be a greater harm than losing it. The records on your phone stay where they are; you can make a new cloud backup with your new account. Your subscription is tied to your Google Play account; you restore it through Google Play itself.</li>
+  <li><strong>We do not move data to another account.</strong> Your cloud backup, your trainer link and your package code are not transferred to a new account you open: we cannot verify that two accounts belong to the same person, and giving your data to the wrong person would be a greater harm than losing it. The records on your phone stay where they are; you can make a new cloud backup with your new account. Your subscription is tied to your account in the store you bought from (Google Play or the App Store); you restore it through that store itself.</li>
   <li><strong>Deleting an account you can no longer access:</strong> if you cannot write from the account's e-mail address, write from another address to <a href="mailto:in1destek@gmail.com?subject=Deleting%20an%20account%20I%20cannot%20access">in1destek@gmail.com</a>, giving the account's e-mail address and information that can show the account is yours (for example roughly when you opened it, or the name of the trainer you were linked to). If this information lets us reasonably verify that the account is yours, we delete it; if it does not, we tell you so, with the reason, within 30 days at the latest. This check is needed to protect against requests trying to delete someone else's account.</li>
 </ul>
 
@@ -273,13 +281,13 @@
 <h2 id="iletisim">14. Contact</h2>
 <p>For any question or request: <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a></p>
 
-<!-- Short in-app version: app/src/main/java/com/cctogether/in1/ortak/AydinlatmaMetni.kt — the two change together, same version stamp (4 September 2026). -->
+<!-- Short in-app version: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — the two change together (4 September 2026). Version 4 = AYDINLATMA_SURUMU 2026-10-28. -->
 <h2 id="aydinlatma">Privacy Notice (KVKK art. 10)</h2>
 <p>We inform you as required by article 10 of Turkish Personal Data Protection Law no. 6698.</p>
 <ul>
   <li><strong>Data controller:</strong> Ali Emre CİNEMRE, <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a> (section 1).</li>
   <li><strong>Personal data processed and the purposes of processing:</strong> explained in detail in sections 3 and 5. If you use the App without an account, we process no personal data at all.</li>
-  <li><strong>To whom and for what purpose it may be transferred:</strong> to your trainer (while the link lasts, section 3.4), to other users (trainer profile and anonymous reviews), and to our infrastructure providers Supabase and Google, for the purposes explained in sections 6 and 7. Transfers to Germany and the USA rest on your explicit consent.</li>
+  <li><strong>To whom and for what purpose it may be transferred:</strong> to your trainer (while the link lasts, section 3.4), to other users (trainer profile and anonymous reviews), and to our infrastructure providers Supabase, Google and (on iPhone) Apple, for the purposes explained in sections 6 and 7. Transfers to Germany and the USA rest on your explicit consent.</li>
   <li><strong>Method and legal grounds of collection:</strong> your data is collected electronically and by automated means, from the information you enter while using the App and from the technical records created while it runs. The legal grounds are listed per purpose in the table in section 5: formation and performance of the contract, legitimate interest, legal obligation, and - for health data and transfers abroad - your explicit consent.</li>
   <li><strong>Your rights:</strong> your rights under KVKK art. 11 and how to apply are set out in section 10.</li>
 </ul>
