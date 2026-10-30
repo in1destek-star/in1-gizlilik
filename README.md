@@ -52,7 +52,14 @@ Verilerin kullanımını etkileyen bir değişiklikte rıza yeniden istenir
 (politika bölüm 13) — **gerekiyorsa**. 28 Ekim 2026 (Sürüm 4, `AYDINLATMA_SURUMU`
 2026-10-28): sürüm arttı ama yeniden rıza dalgası açılmadı, bilinçli — uygulama rızayı
 sürümle tutmuyor ve yeni kalemlerin (antrenörle isteğe bağlı paylaşım) her birinin rızası
-kendi anahtarı; gerekçe `AydinlatmaMetni.kt`'nin 28 Ekim notunda.
+kendi anahtarı; gerekçe `AydinlatmaMetni.kt`'nin 28 Ekim notunda. 29 Ekim 2026 (Sürüm 5, `AYDINLATMA_SURUMU` 2026-10-29, Kullanım
+Koşulları Sürüm 2): rapor fotoğrafları ve ekran görüntüsü bildirimi — aynı ölçüyle yeniden rıza dalgası yok;
+Antrenör Sözleşmesi A13'te kaldı (avukat dönünce A14). 30 Ekim 2026 (Sürüm 6, `AYDINLATMA_SURUMU` 2026-10-30 — uygulama içi
+metinde yalnız menü yolları değişti, rıza kaydından söz etmiyor): bulut yedeği silinince rıza ve geri çekme kaydı (tür + iki tarih) hesap
+silinene kadar kalır (sunucu `riza_gecmisi`); İngilizcede eksik kalan "vücut fotoğrafları" bölüm 4'e eklendi. Aynı sürümde bölüm 9: bulut yedeği uygulamaca
+uçtan uca şifrelenmez, telefondaki veri işletim sisteminin şifrelemesine bırakılır (harita bulguları A4 · A10, karar). Ayrıca
+aylık şifreli felaket kurtarma kopyası (GitHub, 90 gün — iş akışı `sunucu-dokumu.yml`) sağlayıcı listesine,
+yurt dışı aktarıma, saklama tablosuna ve bölüm 11'e yazıldı (harita A8).
 
 **Her değişiklik üçünü birden gerektirmez** (5 Eylül 2026, Washington bölümü):
 o gün yalnız web sayfalarına 7.2 eklendi ve `AYDINLATMA_SURUMU` bilerek
