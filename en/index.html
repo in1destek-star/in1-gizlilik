@@ -31,7 +31,7 @@
 <body>
 
 <h1>In1 - Privacy Policy and Privacy Notice</h1>
-<p class="meta">Last updated: 1 November 2026 · Version 7 · <a href="../">Türkçe</a></p>
+<p class="meta">Last updated: 6 November 2026 · Version 8 · <a href="../">Türkçe</a></p>
 <p class="en">This is a translation of the Turkish original, provided for convenience. If the two texts differ, the <a href="../">Turkish text</a> prevails.</p>
 
 <nav>
@@ -136,6 +136,15 @@
 </ul>
 <p>Send only photos of yourself; do not send photos of anyone else.</p>
 
+<h3 id="mesajlasma">3.4.2 Messaging your trainer (if you are 18 or older)</h3>
+<p>While the link lasts you can message your trainer inside the App. Messages are <strong>end-to-end encrypted</strong>: each phone creates its own key pair and the private key never leaves the phone; a message is locked on your phone with the other party's public key before it is sent. No one, including us, can read its content.</p>
+<ul>
+  <li><strong>What the server holds:</strong> your public key for message encryption; the encrypted form of messages that have not yet reached the other phone; the age declaration you gave when entering the code and when you gave it. A message is deleted from the server as soon as it reaches the other phone; if it never does, at the latest after 7 days, and the day after the link ends.</li>
+  <li><strong>On the phone:</strong> the readable messages are kept only on the two phones, in the app's own file; they are not part of the cloud backup or the device backup. After a phone change old messages cannot be opened. Once the link has ended, the conversation history on the phone is deleted within 7 days at the latest.</li>
+  <li><strong>Age:</strong> messaging is off with a client under 18 (a parental consent declaration does not open it). If the trainer reports that the client is under 18, messaging closes immediately.</li>
+  <li><strong>Notifications and blocking:</strong> a new-message notification does not contain the message, only the sender's name (3.7). You can report a conversation and block the other party (3.8, 3.9).</li>
+</ul>
+
 <h3>3.5 Trainer profile (for those who become trainers)</h3>
 <p>When you become a trainer you create a <strong>commercial profile</strong> visible to other users: your real name, profile picture, WhatsApp line, biography, the services you offer, your "I am over 18" statement, and the date and version of the agreement you accepted. You choose who can see your WhatsApp number (everyone / my students only / no one). The profile picture is kept at a publicly accessible file address; anyone who knows the link can view it.</p>
 <p>Duration: until you stop being a trainer or delete your account.</p>
@@ -144,13 +153,13 @@
 <p>You may give a trainer whose student you are a rating from 1 to 5 and a review of up to 500 characters; the trainer may reply to your review. Reviews are published to other users inside the App <strong>without showing your name</strong>. You can delete your rating and review at any time.</p>
 
 <h3>3.7 Notifications</h3>
-<p>For notifications about new assignments, reports, answers and expiring terms, and for the notification telling you that your trainer took a screenshot of your report photos (<a href="#rapor-fotograflari">3.4.1</a>), your phone's Firebase notification token and your app language are held on the server. The notification text (for example your trainer's name and "assigned a new program") is delivered from our server to your phone through Google's <strong>Firebase Cloud Messaging</strong> service; on iPhone this delivery also passes through Apple's notification service (APNs). The token is deleted when you sign out. You can turn notifications off in the app settings. Records of notifications sent are deleted within 30 days at the latest. The time a screenshot was taken is also written to the report record and deleted together with the report.</p>
+<p>For notifications about new assignments, reports, answers, expiring terms and new messages (a message notification shows only the sender's name, never the message), and for the notification telling you that your trainer took a screenshot of your report photos (<a href="#rapor-fotograflari">3.4.1</a>), your phone's Firebase notification token and your app language are held on the server. The notification text (for example your trainer's name and "assigned a new program") is delivered from our server to your phone through Google's <strong>Firebase Cloud Messaging</strong> service; on iPhone this delivery also passes through Apple's notification service (APNs). The token is deleted when you sign out. You can turn notifications off in the app settings. Records of notifications sent are deleted within 30 days at the latest. The time a screenshot was taken is also written to the report record and deleted together with the report.</p>
 
 <h3>3.8 Blocking</h3>
-<p>When you block a user, that record is held on the server and that person's reviews are not shown to you. When you unblock them, the record is deleted.</p>
+<p>When you block a user, that record is held on the server; that person's reviews are not shown to you and, if they are your trainer or client, messaging closes in both directions. When you unblock them, the record is deleted.</p>
 
 <h3>3.9 Reporting</h3>
-<p>When you report a review or a trainer profile, your report (the target, the reason and your explanation if you gave one) is held on the server for review. Only the data controller sees this record; your identity is not disclosed to the person reported. If the reporting or the reported account is deleted, the record is kept for 30 more days for a possible legal claim or official inquiry, then permanently deleted.</p>
+<p>When you report a review, a trainer profile or a messaging conversation, your report (the target, the reason and your explanation if you gave one) is held on the server for review. When you report a conversation, a short excerpt of the latest messages on your phone (at most 500 characters) is sent from your phone and written to the report record; because messages are encrypted, we have no other way to see their content. Only the data controller sees this record; your identity is not disclosed to the person reported. If the reporting or the reported account is deleted, the record is kept for 30 more days for a possible legal claim or official inquiry, then permanently deleted.</p>
 
 <h3>3.10 Payment</h3>
 <p>Subscriptions, and the one-time packages that trainers buy for their students, are purchased through Google Play on Android and through the App Store on iPhone. Your card and payment details stay with Google or Apple; they never reach us. Only the verification record of the purchase (product, plan, status, expiry date and the store's transaction number) reaches us; we verify it within Google's or Apple's system and store it linked to your account. The coaching fee you pay your trainer is entirely outside the App; we neither see nor process it.</p>
@@ -253,6 +262,9 @@
   <tr><td>Rating and review</td><td>Until you delete them or the account is deleted</td></tr>
   <tr><td>Report records</td><td>Until the account is deleted; 30 more days if the reporting or the reported account is deleted</td></tr>
   <tr><td>Blocking records</td><td>Until you unblock or the account is deleted</td></tr>
+  <tr><td>Encrypted messages in transit (server)</td><td>Immediately once they reach the other phone; otherwise at the latest after 7 days; the day after the link ends</td></tr>
+  <tr><td>Messages (phone)</td><td>While the link lasts; at the latest 7 days after it ends</td></tr>
+  <tr><td>Message encryption public key and the time of the age declaration</td><td>Until the account is deleted (the age declaration together with the link record)</td></tr>
   <tr><td>Record of consent and withdrawal (cloud backup)</td><td>Until the account is deleted (even if you delete the backup; only the type of consent and its dates)</td></tr>
   <tr><td>Notification token</td><td>When the session ends</td></tr>
   <tr><td>Notification delivery records</td><td>30 days at the latest</td></tr>
@@ -297,7 +309,7 @@
 </ul>
 
 <h2 id="cocuklar">12. Children</h2>
-<p>The App is not directed at children under 13. To create a trainer link you must be at least 15 years old; for ages 15-17 a statement of parental consent is required. The statement is not verified; responsibility lies with the person making it and their parent or guardian. To become a trainer you must be over 18. If you believe we are processing a child's data without consent, write to us and we will delete the record.</p>
+<p>The App is not directed at children under 13. To create a trainer link you must be at least 15 years old; when linking you declare your age (18 or older, or 15-17 with parental consent). The declaration is not verified; responsibility for a false declaration lies with the person making it and their parent or guardian. Trainer messaging is off for anyone under 18. To become a trainer you must be over 18. If you believe we are processing a child's data without consent, write to us and we will delete the record.</p>
 
 <h2 id="degisiklik">13. Changes</h2>
 <p>When we update this text, the date and version number above change. For an important change affecting how your data is used, we will inform you inside the app and, where necessary, ask for your consent again. Previous versions are sent on request.</p>
@@ -305,7 +317,7 @@
 <h2 id="iletisim">14. Contact</h2>
 <p>For any question or request: <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a></p>
 
-<!-- Short in-app version: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — the two change together (4 September 2026). Version 6 (30 October 2026: record of consent and withdrawal, encryption, menu paths, disaster-recovery copy, 30 days for report records) = AYDINLATMA_SURUMU 2026-10-30. -->
+<!-- Short in-app version: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — the two change together (4 September 2026). Version 6 (30 October 2026: record of consent and withdrawal, encryption, menu paths, disaster-recovery copy, 30 days for report records) = AYDINLATMA_SURUMU 2026-10-30. Version 8 (6 November 2026: trainer messaging — 3.4.2, 3.7, 3.8, 3.9, retention, 12) = AYDINLATMA_SURUMU 2026-11-06. -->
 <h2 id="aydinlatma">Privacy Notice (KVKK art. 10)</h2>
 <p>We inform you as required by article 10 of Turkish Personal Data Protection Law no. 6698.</p>
 <ul>
