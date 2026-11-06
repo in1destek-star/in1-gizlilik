@@ -31,7 +31,7 @@
 <body>
 
 <h1>In1 - Gizlilik Politikası ve Aydınlatma Metni</h1>
-<p class="meta">Son güncelleme: 1 Kasım 2026 · Sürüm 7 · <a href="en/">English</a></p>
+<p class="meta">Son güncelleme: 6 Kasım 2026 · Sürüm 8 · <a href="en/">English</a></p>
 <p class="en">An <a href="en/">English translation</a> of this page is available. If the two texts differ, this Turkish text prevails.</p>
 
 
@@ -137,6 +137,15 @@
 </ul>
 <p>Yalnızca kendi fotoğraflarınızı gönderin; başka birinin fotoğrafını göndermeyin.</p>
 
+<h3 id="mesajlasma">3.4.2 Antrenörünüzle mesajlaşma (18 yaşını doldurduysanız)</h3>
+<p>Bağ sürerken antrenörünüzle Uygulama içinden yazışabilirsiniz. Mesajlar <strong>uçtan uca şifrelenir</strong>: her telefon kendi anahtar çiftini üretir, gizli anahtar telefondan çıkmaz; mesaj karşı tarafın açık anahtarıyla telefonunuzda kilitlenip gönderilir. Biz dahil kimse mesajın içeriğini okuyamaz.</p>
+<ul>
+  <li><strong>Sunucuda ne tutulur:</strong> mesaj şifreleme için açık anahtarınız; karşı telefona henüz ulaşmamış mesajların şifreli hâli; kod girerken verdiğiniz yaş beyanı ve verildiği an. Mesaj karşı telefona indiği anda sunucudan silinir; hiç inmezse en geç 7 gün sonra, bağ biterse ertesi gün silinir.</li>
+  <li><strong>Telefonda:</strong> mesajların okunur hâli yalnızca iki tarafın telefonunda, uygulamanın kendi dosyasında durur; bulut yedeğine ve cihaz yedeğine girmez. Telefon değiştirdiğinizde eski mesajlar açılamaz. Bağ bittikten sonra telefondaki konuşma geçmişi en geç 7 gün içinde silinir.</li>
+  <li><strong>Yaş:</strong> 18 yaşından küçük öğrenciyle mesajlaşma kapalıdır (veli onayı beyanıyla da açılmaz). Antrenör öğrencinin 18 yaşından küçük olduğunu bildirirse mesajlaşma hemen kapanır.</li>
+  <li><strong>Bildirim ve engel:</strong> yeni mesaj bildiriminde mesajın içeriği yer almaz, yalnızca gönderenin adı yazar (3.7). Bir konuşmayı bildirebilir, karşı tarafı engelleyebilirsiniz (3.8, 3.9).</li>
+</ul>
+
 <h3>3.5 Antrenör profili (antrenör olanlar için)</h3>
 <p>Antrenör olduğunuzda diğer kullanıcılara açık bir <strong>ticari profil</strong> oluşturursunuz: gerçek adınız, profil fotoğrafınız, WhatsApp hattınız, biyografiniz, verdiğiniz hizmetler, "18 yaşımı doldurdum" beyanınız ve sözleşmeyi kabul ettiğiniz tarih ile sürüm. WhatsApp numaranızın kime görüneceğini (herkes / yalnız öğrencilerim / kimse) siz seçersiniz. Profil fotoğrafı herkese açık bir dosya adresinde tutulur; bağlantıyı bilen herkes görebilir.</p>
 <p>Süre: antrenörlüğü bırakana ya da hesabınızı silene kadar.</p>
@@ -145,13 +154,13 @@
 <p>Öğrencisi olduğunuz bir antrenöre 1-5 arası puan ve en çok 500 karakterlik bir yorum verebilirsiniz; antrenör yorumunuza cevap yazabilir. Yorumlar Uygulama içinde diğer kullanıcılara <strong>adınız gösterilmeden</strong> yayınlanır. Puanınızı ve yorumunuzu istediğiniz zaman silebilirsiniz.</p>
 
 <h3>3.7 Bildirimler</h3>
-<p>Yeni atama, rapor, cevap ve süre bitimi bildirimleri ile antrenörünüzün rapor fotoğraflarınızın ekran görüntüsünü aldığını bildiren bildirim (<a href="#rapor-fotograflari">3.4.1</a>) için telefonunuzun Firebase bildirim jetonu ve uygulama diliniz sunucuda tutulur. Bildirim metni (örneğin antrenörünüzün adı ve "yeni program atadı") sunucumuzdan Google'ın <strong>Firebase Cloud Messaging</strong> hizmeti aracılığıyla telefonunuza iletilir; iPhone'da bu iletim ayrıca Apple'ın bildirim hizmeti (APNs) üzerinden geçer. Oturumu kapattığınızda jeton silinir. Bildirimleri uygulama ayarlarından kapatabilirsiniz. Gönderilen bildirimlerin kaydı en geç 30 gün içinde silinir. Ekran görüntüsünün alındığı an ayrıca rapor kaydına yazılır ve rapor ile birlikte silinir.</p>
+<p>Yeni atama, rapor, cevap, süre bitimi ve yeni mesaj bildirimleri (mesaj bildiriminde yalnızca gönderenin adı yazar, mesajın içeriği yazmaz) ile antrenörünüzün rapor fotoğraflarınızın ekran görüntüsünü aldığını bildiren bildirim (<a href="#rapor-fotograflari">3.4.1</a>) için telefonunuzun Firebase bildirim jetonu ve uygulama diliniz sunucuda tutulur. Bildirim metni (örneğin antrenörünüzün adı ve "yeni program atadı") sunucumuzdan Google'ın <strong>Firebase Cloud Messaging</strong> hizmeti aracılığıyla telefonunuza iletilir; iPhone'da bu iletim ayrıca Apple'ın bildirim hizmeti (APNs) üzerinden geçer. Oturumu kapattığınızda jeton silinir. Bildirimleri uygulama ayarlarından kapatabilirsiniz. Gönderilen bildirimlerin kaydı en geç 30 gün içinde silinir. Ekran görüntüsünün alındığı an ayrıca rapor kaydına yazılır ve rapor ile birlikte silinir.</p>
 
 <h3>3.8 Engelleme</h3>
-<p>Bir kullanıcıyı engellediğinizde bu kayıt sunucuda tutulur ve o kişinin yorumları size gösterilmez. Engeli kaldırdığınızda kayıt silinir.</p>
+<p>Bir kullanıcıyı engellediğinizde bu kayıt sunucuda tutulur; o kişinin yorumları size gösterilmez ve antrenörünüz ya da öğrencinizse mesajlaşma iki yönde kapanır. Engeli kaldırdığınızda kayıt silinir.</p>
 
 <h3>3.9 Şikâyet</h3>
-<p>Bir yorumu ya da antrenör profilini şikâyet ettiğinizde şikâyetiniz (hedef, sebep ve varsa açıklamanız) inceleme için sunucuda tutulur. Bu kaydı yalnızca veri sorumlusu görür; şikâyet edilen kişiye kimliğiniz açılmaz. Şikâyet eden ya da şikâyet edilen hesap silinirse kayıt, olası bir hukuki talep ya da resmî inceleme için 30 gün daha saklanır, sonra kalıcı olarak silinir.</p>
+<p>Bir yorumu, antrenör profilini ya da bir mesajlaşma konuşmasını şikâyet ettiğinizde şikâyetiniz (hedef, sebep ve varsa açıklamanız) inceleme için sunucuda tutulur. Bir konuşmayı bildirdiğinizde telefonunuzdaki son mesajlardan kısa bir alıntı (en çok 500 karakter) telefonunuzdan gönderilir ve şikâyet kaydına yazılır; mesajlar şifreli olduğu için başka hiçbir yoldan içeriğe erişemeyiz. Bu kaydı yalnızca veri sorumlusu görür; şikâyet edilen kişiye kimliğiniz açılmaz. Şikâyet eden ya da şikâyet edilen hesap silinirse kayıt, olası bir hukuki talep ya da resmî inceleme için 30 gün daha saklanır, sonra kalıcı olarak silinir.</p>
 
 <h3>3.10 Ödeme</h3>
 <p>Abonelikler ve antrenörlerin öğrencileri için aldığı tek seferlik paketler Android'de Google Play, iPhone'da App Store üzerinden alınır. Kart ve ödeme bilgileriniz Google'da ya da Apple'da kalır; bize hiç gelmez. Bize yalnızca satın almanın doğrulama kaydı (ürün, plan, durum, bitiş tarihi ve mağazanın işlem numarası) ulaşır; bunu Google'ın ya da Apple'ın sisteminde doğrular ve hesabınıza bağlı olarak saklarız. Antrenörünüze ödediğiniz koçluk ücreti tamamen Uygulama dışındadır; onu görmez ve işlemeyiz.</p>
@@ -256,6 +265,9 @@
   <tr><td>Puan ve yorum</td><td>Siz silene ya da hesap silinene kadar</td></tr>
   <tr><td>Şikâyet kayıtları</td><td>Hesap silinene kadar; şikâyet eden ya da şikâyet edilen hesap silinirse 30 gün daha</td></tr>
   <tr><td>Engelleme kayıtları</td><td>Engeli kaldırana ya da hesap silinene kadar</td></tr>
+  <tr><td>Yoldaki şifreli mesajlar (sunucu)</td><td>Karşı telefona inince hemen; inmezse en geç 7 gün; bağ biterse ertesi gün</td></tr>
+  <tr><td>Mesajlar (telefon)</td><td>Bağ sürerken; bağ bittikten sonra en geç 7 gün</td></tr>
+  <tr><td>Mesaj şifreleme açık anahtarı ve yaş beyanının anı</td><td>Hesap silinene kadar (yaş beyanı bağ kaydıyla birlikte)</td></tr>
   <tr><td>Rıza ve geri çekme kaydı (bulut yedek)</td><td>Hesap silinene kadar (yedeği silseniz de; yalnızca rızanın türü ve tarihleri)</td></tr>
   <tr><td>Bildirim jetonu</td><td>Oturum kapanınca</td></tr>
   <tr><td>Bildirim gönderim kayıtları</td><td>En geç 30 gün</td></tr>
@@ -300,7 +312,7 @@
 </ul>
 
 <h2 id="cocuklar">12. Çocuklar</h2>
-<p>Uygulama 13 yaşından küçüklere yönelik değildir. Antrenör bağı kurmak için en az 15 yaşında olmanız gerekir; 15-17 yaş için veli onayı beyanı istenir. Beyan doğrulanmaz; sorumluluk beyan edene ve velisine aittir. Antrenör olmak için 18 yaşını doldurmuş olmak gerekir. Bir çocuğun verisini rızasız işlediğimizi düşünüyorsanız bize yazın; kaydı sileriz.</p>
+<p>Uygulama 13 yaşından küçüklere yönelik değildir. Antrenör bağı kurmak için en az 15 yaşında olmanız gerekir; bağlanırken yaşınızı beyan edersiniz (18 yaşını doldurdum ya da 15-17 yaş, veli onayım var). Beyan doğrulanmaz; yanlış beyanın sorumluluğu beyan edene ve velisine aittir. 18 yaşından küçüklerle antrenör mesajlaşması kapalıdır. Antrenör olmak için 18 yaşını doldurmuş olmak gerekir. Bir çocuğun verisini rızasız işlediğimizi düşünüyorsanız bize yazın; kaydı sileriz.</p>
 
 <h2 id="degisiklik">13. Değişiklikler</h2>
 <p>Bu metni güncellediğimizde üstteki tarih ve sürüm numarası değişir. Verilerinizin kullanımını etkileyen önemli bir değişiklikte uygulama içinde sizi bilgilendirir, gerekiyorsa rızanızı yeniden isteriz. Önceki sürümler istek üzerine gönderilir.</p>
@@ -308,7 +320,7 @@
 <h2 id="iletisim">14. İletişim</h2>
 <p>Her türlü soru ve talep için: <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a></p>
 
-<!-- Uygulama içi kısa sürüm: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — ikisi birlikte değişir (4 Eylül 2026). Sürüm 6 (30 Ekim 2026: rıza ve geri çekme kaydı, şifreleme, menü yolları, felaket kurtarma kopyası, şikâyet kaydının 30 günü) = AYDINLATMA_SURUMU 2026-10-30. Sürüm 7 (31 Ekim 2026: 3.1 listesinde kendi besinleri — bulut yedeğine de giriyor; yeni veri türü değil, beslenme kaydı) uygulama içi metne dokunmadı, damga 2026-10-30 kaldı. -->
+<!-- Uygulama içi kısa sürüm: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — ikisi birlikte değişir (4 Eylül 2026). Sürüm 6 (30 Ekim 2026: rıza ve geri çekme kaydı, şifreleme, menü yolları, felaket kurtarma kopyası, şikâyet kaydının 30 günü) = AYDINLATMA_SURUMU 2026-10-30. Sürüm 7 (31 Ekim 2026: 3.1 listesinde kendi besinleri — bulut yedeğine de giriyor; yeni veri türü değil, beslenme kaydı) uygulama içi metne dokunmadı, damga 2026-10-30 kaldı. Sürüm 8 (6 Kasım 2026: antrenör mesajlaşması — 3.4.2, 3.7, 3.8, 3.9, saklama, 12) = AYDINLATMA_SURUMU 2026-11-06. -->
 <h2 id="aydinlatma">Aydınlatma Metni (KVKK m.10)</h2>
 <p>6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi uyarınca sizi bilgilendiriyoruz.</p>
 <ul>
