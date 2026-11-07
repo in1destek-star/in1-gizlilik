@@ -31,7 +31,7 @@
 <body>
 
 <h1>In1 - Gizlilik Politikası ve Aydınlatma Metni</h1>
-<p class="meta">Son güncelleme: 6 Kasım 2026 · Sürüm 8 · <a href="en/">English</a></p>
+<p class="meta">Son güncelleme: 7 Kasım 2026 · Sürüm 9 · <a href="en/">English</a></p>
 <p class="en">An <a href="en/">English translation</a> of this page is available. If the two texts differ, this Turkish text prevails.</p>
 
 
@@ -86,6 +86,7 @@
   <li><strong>Vücut ölçümleri:</strong> kilo, çevre ölçüleri ve girdiğiniz diğer ölçümler, tarihleriyle.</li>
   <li><strong>Profil:</strong> boy, cinsiyet, doğum tarihi, isim-soyisim, kullanıcı adı, e-posta, birim ve bildirim tercihleri.</li>
   <li><strong>Gelişim fotoğrafları:</strong> Fotoğraflarım bölümüne galerinizden eklediğiniz fotoğraflar uygulamanın kendi klasöründe tutulur; bulut yedeğine girmez, Android'in ve iPhone'un (iCloud) cihaz yedeğine de girmez.</li>
+  <li><strong>Kendi hareketleriniz:</strong> kütüphaneye eklediğiniz kendi hareketleriniz ve onlara galeriden eklediğiniz fotoğraf ve videolar (video telefonda sessiz ve en çok 20 saniye olarak küçültülür) ile antrenörünüzün size gönderdiği hareketler uygulamanın kendi klasöründe tutulur; bulut yedeğine ve cihaz yedeğine girmez, bize gelmez (antrenörün gönderdikleri için <a href="#hareket-koprusu">3.4.3</a>).</li>
 </ul>
 <p>Bu verileri biz göremeyiz. Android'in otomatik yedeği (Google Drive) ve telefondan telefona aktarım bu uygulama için kapalıdır; verilerin bizim sunucumuza tek gidiş yolu 3.3'teki düğmedir. iPhone'da telefonunuzun iCloud yedeği açıksa bu kayıtlar Apple'ın tuttuğu cihaz yedeğine de girebilir; o yedeği Apple saklar, biz göremeyiz. Uygulamayı kaldırdığınızda bu veriler silinir.</p>
 
@@ -146,6 +147,15 @@
   <li><strong>Bildirim ve engel:</strong> yeni mesaj bildiriminde mesajın içeriği yer almaz, yalnızca gönderenin adı yazar (3.7). Bir konuşmayı bildirebilir, karşı tarafı engelleyebilirsiniz (3.8, 3.9).</li>
 </ul>
 
+<h3 id="hareket-koprusu">3.4.3 Antrenörünüzün gönderdiği hareketler ve videolar</h3>
+<p>Antrenörünüz kendi kurduğu bir hareketi (ad, etiketler, açıklama ve isteğe bağlı, sessiz, en çok 20 saniyelik bir video) size gönderebilir. Sunucu yalnızca köprüdür:</p>
+<ul>
+  <li><strong>Sunucuda ne tutulur:</strong> hareketin tanımı ve gönderim kaydı (kim, kime, ne zaman) telefonunuza inene kadar, en çok 7 gün. Video dosyası telefonunuza yalnızca bir kez iner; son alıcı indirdiğinde, indirilmezse en geç 7 gün sonra silinir. Antrenörün aylık video hakkını saymak ve bildirilen bir videonun öbür alıcılardan da kalkabilmesi için videonun kimliği, sahibi, yüklendiği ve varsa kaldırıldığı an saklanır (dosyanın kendisi değil).</li>
+  <li><strong>Telefonda:</strong> inen hareket ve video uygulamanın kendi klasöründe durur; bulut yedeğine ve cihaz yedeğine girmez. Bağ bittiğinde ya da antrenör hareketi kaldırdığında video telefonunuzdan silinir; geçmiş antrenmanlarınızda hareketin adı ve kas bilgisi kalır.</li>
+  <li><strong>Bildirim ve engel:</strong> bir videoyu bildirdiğinizde video sunucudan ve aynı videoyu alan bütün öğrencilerin telefonundan kaldırılır ve şikâyet kaydına yazılır (3.9). Antrenörünüzün videolarını engelleyebilirsiniz; hareketler videosuz gelir (3.8).</li>
+  <li><strong>Antrenörseniz:</strong> gönderdiğiniz video öğrencilerinize inene kadar en çok 7 gün sunucuda durur; her gönderimde videodaki görüntülerin size ait olduğunu ya da paylaşma hakkınız olduğunu ayrıca onaylarsınız (Antrenör Sözleşmesi 6.7).</li>
+</ul>
+
 <h3>3.5 Antrenör profili (antrenör olanlar için)</h3>
 <p>Antrenör olduğunuzda diğer kullanıcılara açık bir <strong>ticari profil</strong> oluşturursunuz: gerçek adınız, profil fotoğrafınız, WhatsApp hattınız, biyografiniz, verdiğiniz hizmetler, "18 yaşımı doldurdum" beyanınız ve sözleşmeyi kabul ettiğiniz tarih ile sürüm. WhatsApp numaranızın kime görüneceğini (herkes / yalnız öğrencilerim / kimse) siz seçersiniz. Profil fotoğrafı herkese açık bir dosya adresinde tutulur; bağlantıyı bilen herkes görebilir.</p>
 <p>Süre: antrenörlüğü bırakana ya da hesabınızı silene kadar.</p>
@@ -157,10 +167,10 @@
 <p>Yeni atama, rapor, cevap, süre bitimi ve yeni mesaj bildirimleri (mesaj bildiriminde yalnızca gönderenin adı yazar, mesajın içeriği yazmaz) ile antrenörünüzün rapor fotoğraflarınızın ekran görüntüsünü aldığını bildiren bildirim (<a href="#rapor-fotograflari">3.4.1</a>) için telefonunuzun Firebase bildirim jetonu ve uygulama diliniz sunucuda tutulur. Bildirim metni (örneğin antrenörünüzün adı ve "yeni program atadı") sunucumuzdan Google'ın <strong>Firebase Cloud Messaging</strong> hizmeti aracılığıyla telefonunuza iletilir; iPhone'da bu iletim ayrıca Apple'ın bildirim hizmeti (APNs) üzerinden geçer. Oturumu kapattığınızda jeton silinir. Bildirimleri uygulama ayarlarından kapatabilirsiniz. Gönderilen bildirimlerin kaydı en geç 30 gün içinde silinir. Ekran görüntüsünün alındığı an ayrıca rapor kaydına yazılır ve rapor ile birlikte silinir.</p>
 
 <h3>3.8 Engelleme</h3>
-<p>Bir kullanıcıyı engellediğinizde bu kayıt sunucuda tutulur; o kişinin yorumları size gösterilmez ve antrenörünüz ya da öğrencinizse mesajlaşma iki yönde kapanır. Engeli kaldırdığınızda kayıt silinir.</p>
+<p>Menü › Engellediklerim'den üç tür engel koyabilir ve kaldırabilirsiniz: <strong>kişi</strong> (bağ hemen biter; engel kalkmadan aynı kişiyle yeniden bağ kurulamaz), <strong>mesaj</strong> (bağ sürer, konuşma iki yönde kapanır) ve <strong>video</strong> (yalnızca öğrenci; antrenörün hareketleri gelir, videoları gelmez). Engel kaydı sunucuda engelin türü, anı ve engellediğiniz kişinin o andaki adıyla tutulur; engellediğiniz kişinin yorumları size gösterilmez. Engeli kaldırdığınızda kayıt silinir.</p>
 
 <h3>3.9 Şikâyet</h3>
-<p>Bir yorumu, antrenör profilini ya da bir mesajlaşma konuşmasını şikâyet ettiğinizde şikâyetiniz (hedef, sebep ve varsa açıklamanız) inceleme için sunucuda tutulur. Bir konuşmayı bildirdiğinizde telefonunuzdaki son mesajlardan kısa bir alıntı (en çok 500 karakter) telefonunuzdan gönderilir ve şikâyet kaydına yazılır; mesajlar şifreli olduğu için başka hiçbir yoldan içeriğe erişemeyiz. Bu kaydı yalnızca veri sorumlusu görür; şikâyet edilen kişiye kimliğiniz açılmaz. Şikâyet eden ya da şikâyet edilen hesap silinirse kayıt, olası bir hukuki talep ya da resmî inceleme için 30 gün daha saklanır, sonra kalıcı olarak silinir.</p>
+<p>Bir yorumu, antrenör profilini, bir mesajlaşma konuşmasını ya da antrenörünüzün gönderdiği bir videoyu şikâyet ettiğinizde şikâyetiniz (hedef, sebep ve varsa açıklamanız) inceleme için sunucuda tutulur. Bir konuşmayı bildirdiğinizde telefonunuzdaki son mesajlardan kısa bir alıntı (en çok 500 karakter) telefonunuzdan gönderilir ve şikâyet kaydına yazılır; mesajlar şifreli olduğu için başka hiçbir yoldan içeriğe erişemeyiz. Bir videoyu bildirdiğinizde video hemen kaldırılır ve şikâyet kaydına videonun kimliği yazılır. Bu kaydı yalnızca veri sorumlusu görür; şikâyet edilen kişiye kimliğiniz açılmaz. Şikâyet eden ya da şikâyet edilen hesap silinirse kayıt, olası bir hukuki talep ya da resmî inceleme için 30 gün daha saklanır, sonra kalıcı olarak silinir.</p>
 
 <h3>3.10 Ödeme</h3>
 <p>Abonelikler ve antrenörlerin öğrencileri için aldığı tek seferlik paketler Android'de Google Play, iPhone'da App Store üzerinden alınır. Kart ve ödeme bilgileriniz Google'da ya da Apple'da kalır; bize hiç gelmez. Bize yalnızca satın almanın doğrulama kaydı (ürün, plan, durum, bitiş tarihi ve mağazanın işlem numarası) ulaşır; bunu Google'ın ya da Apple'ın sisteminde doğrular ve hesabınıza bağlı olarak saklarız. Antrenörünüze ödediğiniz koçluk ücreti tamamen Uygulama dışındadır; onu görmez ve işlemeyiz.</p>
@@ -264,9 +274,13 @@
   <tr><td>Antrenör profili ve fotoğrafı</td><td>Antrenörlük bırakılana ya da hesap silinene kadar</td></tr>
   <tr><td>Puan ve yorum</td><td>Siz silene ya da hesap silinene kadar</td></tr>
   <tr><td>Şikâyet kayıtları</td><td>Hesap silinene kadar; şikâyet eden ya da şikâyet edilen hesap silinirse 30 gün daha</td></tr>
-  <tr><td>Engelleme kayıtları</td><td>Engeli kaldırana ya da hesap silinene kadar</td></tr>
+  <tr><td>Engelleme kayıtları (engellenen kişinin o andaki adı dahil)</td><td>Engeli kaldırana ya da hesap silinene kadar</td></tr>
   <tr><td>Yoldaki şifreli mesajlar (sunucu)</td><td>Karşı telefona inince hemen; inmezse en geç 7 gün; bağ biterse ertesi gün</td></tr>
   <tr><td>Mesajlar (telefon)</td><td>Bağ sürerken; bağ bittikten sonra en geç 7 gün</td></tr>
+  <tr><td>Antrenörün gönderdiği hareketin tanımı ve gönderim kaydı (sunucu)</td><td>Telefona inince; inmezse en geç 7 gün</td></tr>
+  <tr><td>Hareket videosu (sunucu)</td><td>Son alıcının telefonu indirince hemen; indirilmezse en geç 7 gün; bildirilirse hemen</td></tr>
+  <tr><td>Hareket videosunun kimlik kaydı (dosya değil: sahibi, yüklendiği ve kaldırıldığı an)</td><td>Antrenörün hesabı silinene kadar</td></tr>
+  <tr><td>Kendi hareketleriniz, fotoğraf ve videoları; antrenörden gelen hareketler ve videoları</td><td>Yalnızca telefonunuzda; siz silene ya da uygulamayı kaldırana kadar (antrenörden gelen video: bağ bitince ya da bildirilince)</td></tr>
   <tr><td>Mesaj şifreleme açık anahtarı ve yaş beyanının anı</td><td>Hesap silinene kadar (yaş beyanı bağ kaydıyla birlikte)</td></tr>
   <tr><td>Rıza ve geri çekme kaydı (bulut yedek)</td><td>Hesap silinene kadar (yedeği silseniz de; yalnızca rızanın türü ve tarihleri)</td></tr>
   <tr><td>Bildirim jetonu</td><td>Oturum kapanınca</td></tr>
@@ -320,7 +334,7 @@
 <h2 id="iletisim">14. İletişim</h2>
 <p>Her türlü soru ve talep için: <a href="mailto:in1destek@gmail.com">in1destek@gmail.com</a></p>
 
-<!-- Uygulama içi kısa sürüm: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — ikisi birlikte değişir (4 Eylül 2026). Sürüm 6 (30 Ekim 2026: rıza ve geri çekme kaydı, şifreleme, menü yolları, felaket kurtarma kopyası, şikâyet kaydının 30 günü) = AYDINLATMA_SURUMU 2026-10-30. Sürüm 7 (31 Ekim 2026: 3.1 listesinde kendi besinleri — bulut yedeğine de giriyor; yeni veri türü değil, beslenme kaydı) uygulama içi metne dokunmadı, damga 2026-10-30 kaldı. Sürüm 8 (6 Kasım 2026: antrenör mesajlaşması — 3.4.2, 3.7, 3.8, 3.9, saklama, 12) = AYDINLATMA_SURUMU 2026-11-06. -->
+<!-- Uygulama içi kısa sürüm: paylasilan/src/commonMain/kotlin/com/cctogether/in1/ortak/AydinlatmaMetni.kt — ikisi birlikte değişir (4 Eylül 2026). Sürüm 6 (30 Ekim 2026: rıza ve geri çekme kaydı, şifreleme, menü yolları, felaket kurtarma kopyası, şikâyet kaydının 30 günü) = AYDINLATMA_SURUMU 2026-10-30. Sürüm 7 (31 Ekim 2026: 3.1 listesinde kendi besinleri — bulut yedeğine de giriyor; yeni veri türü değil, beslenme kaydı) uygulama içi metne dokunmadı, damga 2026-10-30 kaldı. Sürüm 8 (6 Kasım 2026: antrenör mesajlaşması — 3.4.2, 3.7, 3.8, 3.9, saklama, 12) = AYDINLATMA_SURUMU 2026-11-06. Sürüm 9 (7 Kasım 2026: kendi hareketi ve antrenörün gönderdiği hareket/video — 3.1, 3.4.3, üç türlü engel 3.8, video şikâyeti 3.9, saklama) = AYDINLATMA_SURUMU 2026-11-07. -->
 <h2 id="aydinlatma">Aydınlatma Metni (KVKK m.10)</h2>
 <p>6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi uyarınca sizi bilgilendiriyoruz.</p>
 <ul>
