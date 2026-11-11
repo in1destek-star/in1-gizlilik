@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>In1</title>
+<!--
+  KENDİ YZ'Nİ BAĞLA — ONAY SAYFASI (11 Kasım 2026). Kullanıcının yapay zekâsı (Claude, ChatGPT…) In1'e bağlanırken
+  tarayıcının geldiği sayfa. Sunucu işlevi (yz-priz) HTML sunamadığı için burada, gizlilik sitesinde durur.
+  NE YAPAR: bağlantı isteğinin kodunu gösterir ve onayı bekler. Kullanıcı kodu In1'in İÇİNDE (YZ antrenör › Kendi
+  YZ'ni bağla) yazıp izin verir; sayfa bunu yoklayarak öğrenir ve yapay zekâya geri döner. Bu sayfada giriş yapılmaz,
+  hiçbir şey yazılmaz, çerez yok, dış kaynak yok.
+  KAYNAK: projectc/gizlilik/yz-bagla.html — yayındaki kopya buradan yüklenir. Sunucu tarafı: supabase/functions/yz-priz/giris.ts.
+  DİL: tarayıcı Türkçeyse Türkçe, değilse İngilizce (uygulamanın öteki dilleri sonraki iş).
+-->
+<style>
+  :root { color-scheme: light; }
+  body { max-width: 560px; margin: 0 auto; padding: 32px 20px 56px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.55; color: #1f2328; background: #fff; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 6px; }
+  p, li { font-size: 1rem; }
+  ol { padding-left: 22px; margin: 14px 0; }
+  li { margin: 6px 0; }
+  .kim { font-size: 1.08rem; margin: 0 0 18px; }
+  .kod { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 2.3rem; font-weight: 700; letter-spacing: 0.12em; text-align: center; padding: 18px 8px; margin: 18px 0 8px; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 10px; user-select: all; }
+  .sure { color: #57606a; font-size: 0.95rem; text-align: center; margin: 0 0 22px; }
+  .kutu { background: #f6f8fa; border-left: 4px solid #0969da; padding: 10px 14px; margin: 14px 0; border-radius: 0 6px 6px 0; font-size: 0.95rem; }
+  .uyari { border-left-color: #bf8700; background: #fff8c5; }
+  .durum { font-size: 1.1rem; margin: 28px 0; }
+  .alt { color: #57606a; font-size: 0.9rem; margin-top: 36px; }
+  a { color: #0969da; }
+  [hidden] { display: none !important; }
+  @media (max-width: 420px) { .kod { font-size: 1.8rem; } h1 { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+<h1 id="baslik">In1</h1>
+
+<div id="bekleme" hidden>
+  <p class="kim" id="kim"></p>
+  <ol>
+    <li id="adim1"></li>
+    <li id="adim2"></li>
+    <li id="adim3"></li>
+  </ol>
+  <div class="kod" id="kod" aria-live="polite"></div>
+  <p class="sure" id="sure"></p>
+  <div class="kutu uyari" id="uyari"></div>
+  <div class="kutu" id="bilgi"></div>
+</div>
+
+<p class="durum" id="durum" role="status" aria-live="polite"></p>
+<noscript><p class="durum">This page needs JavaScript. / Bu sayfa JavaScript ister.</p></noscript>
+
+<p class="alt"><a id="gizlilik" href="./"></a></p>
+
+<script>
+(function () {
+  'use strict';
+  var PRIZ = 'https://effelrtpkwsiqnqbkwha.supabase.co/functions/v1/yz-priz';
+  var TR = ((navigator.language || 'en').toLowerCase().indexOf('tr') === 0);
+  var M = TR ? {
+    baslik: "In1'e bağlan",
+    kim: { CLAUDE: 'Claude', CHATGPT: 'ChatGPT', BILGISAYAR: 'Bu bilgisayardaki bir uygulama' },
+    istiyor: function (k) { return k + ', In1 hesabına bağlanmak istiyor.'; },
+    adim1: "Telefonunda In1'i aç.",
+    adim2: "YZ antrenör › Kendi YZ'ni bağla'ya gir.",
+    adim3: 'Aşağıdaki kodu yaz ve izin ver.',
+    sure: function (s) { return 'Kod ' + s + ' daha geçerli. İzin verince bu sayfa kendiliğinden geri döner.'; },
+    uyari: 'Bu sayfayı sen açmadıysan kodu hiçbir yere yazma. In1 bu kodu senden mesajla ya da telefonla istemez.',
+    bilgi: 'Bağlanan yapay zekâ hareket listesini görür ve sana program önerisi bırakır. Kayıtlarını göremez, değiştiremez; öneri, sen uygulamada eklemeden hiçbir şeye dönüşmez. Bağlantıyı uygulamadan dilediğin an kesebilirsin. Premium gerekir.',
+    donuyor: 'Tamam. Yapay zekâna geri dönülüyor…',
+    sureDoldu: 'Kodun süresi doldu. Yapay zekânda In1 bağlantısını yeniden başlat.',
+    bitti: 'Bu bağlantı isteği tamamlandı. Sayfayı kapatabilirsin.',
+    yok: 'Bağlantı isteği bulunamadı ya da süresi doldu. Yapay zekânda In1 bağlantısını yeniden başlat.',
+    hata: 'Bu bağlantı isteği açılamadı. In1 şimdilik yalnız Claude ve ChatGPT ile bağlanır.',
+    agYok: 'Sunucuya ulaşılamıyor, yeniden deneniyor…',
+    gizlilik: 'Gizlilik Politikası',
+    gizlilikAdresi: './'
+  } : {
+    baslik: 'Connect to In1',
+    kim: { CLAUDE: 'Claude', CHATGPT: 'ChatGPT', BILGISAYAR: 'An app on this computer' },
+    istiyor: function (k) { return k + ' wants to connect to your In1 account.'; },
+    adim1: 'Open In1 on your phone.',
+    adim2: 'Go to AI coach › Connect your own AI.',
+    adim3: 'Enter the code below and allow.',
+    sure: function (s) { return 'The code is valid for ' + s + '. This page returns on its own once you allow.'; },
+    uyari: "If you didn't open this page yourself, don't enter the code anywhere. In1 never asks for this code by message or phone.",
+    bilgi: "The connected AI can see the exercise list and leave you program suggestions. It can't see or change your records; a suggestion becomes nothing until you add it in the app. You can disconnect in the app at any time. Premium is required.",
+    donuyor: 'Done. Returning to your AI…',
+    sureDoldu: 'The code has expired. Start the In1 connection again in your AI.',
+    bitti: 'This connection request is complete. You can close this page.',
+    yok: 'The connection request was not found or has expired. Start the In1 connection again in your AI.',
+    hata: 'This connection request could not be opened. For now In1 connects only with Claude and ChatGPT.',
+    agYok: "Can't reach the server, retrying…",
+    gizlilik: 'Privacy Policy',
+    gizlilikAdresi: './en/'
+  };
+
+  var el = function (id) { return document.getElementById(id); };
+  document.documentElement.lang = TR ? 'tr' : 'en';
+  document.title = M.baslik;
+  el('baslik').textContent = M.baslik;
+  el('adim1').textContent = M.adim1;
+  el('adim2').textContent = M.adim2;
+  el('adim3').textContent = M.adim3;
+  el('uyari').textContent = M.uyari;
+  el('bilgi').textContent = M.bilgi;
+  el('gizlilik').textContent = M.gizlilik;
+  el('gizlilik').href = M.gizlilikAdresi;
+
+  function bitir(metin) {
+    el('bekleme').hidden = true;
+    el('durum').textContent = metin;
+    try { sessionStorage.removeItem('in1_istek'); } catch (e) { /* depolama kapalı olabilir */ }
+    durdu = true;
+  }
+
+  // İsteğin kimliği adresin # kısmında gelir; alınır alınmaz adres çubuğundan silinir (geçmişte kalmasın).
+  // Sayfa yenilenirse kimlik bu sekmenin oturum deposundan okunur.
+  var KIMLIK = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+  var parca = location.hash.replace(/^#/, '');
+  var istek = null;
+  var durdu = false;
+  if (parca.indexOf('i=') === 0) istek = parca.slice(2);
+  if (parca) { try { history.replaceState(null, '', location.pathname); } catch (e) { /* önemli değil */ } }
+  if (istek && KIMLIK.test(istek)) {
+    try { sessionStorage.setItem('in1_istek', istek); } catch (e) { /* depolama kapalı olabilir */ }
+  } else if (parca.indexOf('hata=') === 0) {
+    istek = null;
+  } else {
+    try { istek = sessionStorage.getItem('in1_istek'); } catch (e) { istek = null; }
+    if (!istek || !KIMLIK.test(istek)) istek = null;
+  }
+  if (parca.indexOf('hata=') === 0) { bitir(M.hata); return; }
+  if (!istek) { bitir(M.yok); return; }
+
+  // Geri dönülecek adres sunucudan gelir (sunucu onu sabit listeden doğrular); burada bir kez daha bakılır.
+  function guvenilirMi(adres) {
+    return /^https:\/\/(claude\.ai|claude\.com|chatgpt\.com)\//.test(adres) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?\/callback\?/.test(adres);
+  }
+
+  var kalan = 0;
+  var sayac = null;
+  function sureYaz() {
+    var dk = Math.floor(kalan / 60), sn = kalan % 60;
+    el('sure').textContent = M.sure(dk + ':' + (sn < 10 ? '0' : '') + sn);
+  }
+  function sayaciKur(saniye) {
+    kalan = Math.max(0, saniye | 0);
+    sureYaz();
+    if (sayac) return;
+    sayac = setInterval(function () { if (kalan > 0) { kalan--; sureYaz(); } }, 1000);
+  }
+
+  var hataSayisi = 0;
+  var baslangic = Date.now();
+  function yokla() {
+    if (durdu) return;
+    if (Date.now() - baslangic > 16 * 60 * 1000) { bitir(M.sureDoldu); return; }
+    fetch(PRIZ + '/istek?i=' + encodeURIComponent(istek), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('durum ' + r.status); return r.json(); })
+      .then(function (d) {
+        hataSayisi = 0;
+        if (d.durum === 'BEKLIYOR' && /^[A-HJ-NP-Z2-9]{8}$/.test(d.kod || '')) {
+          el('kim').textContent = M.istiyor(M.kim[d.kim] || M.kim.BILGISAYAR);
+          el('kod').textContent = d.kod.slice(0, 4) + '-' + d.kod.slice(4);
+          el('bekleme').hidden = false;
+          el('durum').textContent = '';
+          sayaciKur(d.kalan);
+          setTimeout(yokla, 3000);
+        } else if (d.durum === 'DON' && typeof d.adres === 'string' && guvenilirMi(d.adres)) {
+          bitir(M.donuyor);
+          location.replace(d.adres);
+        } else if (d.durum === 'SURE_DOLDU') {
+          bitir(M.sureDoldu);
+        } else if (d.durum === 'BITTI') {
+          bitir(M.bitti);
+        } else {
+          bitir(M.yok);
+        }
+      })
+      .catch(function () {
+        hataSayisi++;
+        if (hataSayisi >= 3) el('durum').textContent = M.agYok;
+        setTimeout(yokla, 5000);
+      });
+  }
+  yokla();
+})();
+</script>
+</body>
+</html>
