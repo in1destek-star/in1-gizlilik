@@ -159,8 +159,10 @@
   if (!istek) { bitir(M.yok); return; }
 
   // Geri dönülecek adres sunucudan gelir (sunucu onu sabit listeden doğrular); burada bir kez daha bakılır.
+  // 15 Kasım 2026: ChatGPT uygulaması yerel adresin sonuna 12 harflik kimlik ekler (/callback/<kimlik>) — sunucudaki
+  // listeyle (giris.ts › donusKimin) ELLE eşlidir; biri değişirse öbürü de değişir, yoksa sayfa "istek bulunamadı" der.
   function guvenilirMi(adres) {
-    return /^https:\/\/(claude\.ai|claude\.com|chatgpt\.com)\//.test(adres) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?\/callback\?/.test(adres);
+    return /^https:\/\/(claude\.ai|claude\.com|chatgpt\.com)\//.test(adres) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?\/callback(\/[A-Za-z0-9_-]{12})?\?/.test(adres);
   }
 
   var kalan = 0;
